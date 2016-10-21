@@ -1,11 +1,72 @@
-<p> You played paper </p>
 
-<img src="http://localhost:3000/assets/images/paper.png" width = "300">
 
-<p>
-  The computer played <%= @computer_move %>
-</p>
+<div class="container">
+  <hr>
+  <div class="row">
+    <div class="col-md-offset-2 col-md-8">
+      <div class="btn-group btn-group-justified">
+        <a href ="/rock" class="btn btn-block btn-primary">
+          Play Rock
+        </a>
 
-<h3>
-  <%=@outcome%>
-</h3>
+        <a href ="/paper" class="btn btn-block btn-info">
+          Play Paper
+        </a>
+
+        <a href ="/scissors" class="btn btn-block btn-primary">
+          Play Scissors
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <div class="col-md-offset-2 col-md-4">
+      <div class="panel panel-success">
+        <div class= "panel-heading">
+          <div class="panel-title text-center">
+            Paper
+          </div>
+        </div>
+
+        <div class="panel-body">
+          <img class="img-responsive" src = "/assets/images/paper.png">
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="col-md-4">
+      <div class="panel panel-danger">
+        <div class= "panel-heading">
+          <div class="panel-title text-center">
+            <%= @computer_move.capitalize %>
+          </div>
+        </div>
+
+        <div class="panel-body">
+          <img class="img-responsive" src = <%= @url %>>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-xs-12">
+      <div class = "well text-center">
+         <h1>
+            <span class = "label <%= @class%>">
+              <%= @outcome %>
+            </span>
+          </h1>
+       </div>
+    </div>
+  </div>
+</div>

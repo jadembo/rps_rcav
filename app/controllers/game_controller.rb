@@ -5,15 +5,20 @@ class GameController < ApplicationController
 
     if @computer_move =="rock"
       @outcome = "You tied"
+      @class = "label label-warning"
     end
 
     if @computer_move == "scissors"
       @outcome = "You win"
+      @class = "label label-success"
     end
 
     if @computer_move == "paper"
       @outcome = "You lose"
+      @class = "label label-danger"
     end
+
+    @url = "/assets/images/#{@computer_move}.png"
 
     render("game/play_rock.html.erb")
   end
@@ -24,15 +29,20 @@ class GameController < ApplicationController
 
     if @computer_move =="scissors"
       @outcome = "You tied"
+      @class = "label label-warning"
     end
 
     if @computer_move == "rock"
       @outcome = "You lose"
+      @class = "label label-danger"
     end
 
     if @computer_move == "paper"
       @outcome = "You win"
+      @class = "label label-success"
     end
+
+    @url = "/assets/images/#{@computer_move}.png"
 
     render("game/play_scissors.html.erb")
 
@@ -44,15 +54,20 @@ class GameController < ApplicationController
 
     if @computer_move =="paper"
       @outcome = "You tied"
+      @class = "label label-warning"
     end
 
     if @computer_move == "rock"
       @outcome = "You win"
+      @class = "label label-success"
     end
 
     if @computer_move == "scissors"
       @outcome = "You lose"
+      @class = "label label-danger"
     end
+
+    @url = "/assets/images/#{@computer_move}.png"
 
     render("game/play_paper.html.erb")
   end
